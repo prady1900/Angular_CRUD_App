@@ -1,0 +1,8 @@
+<p>list-users works!</p>
+<h1 *ngIf = "listUsers">Displaying {{listUsers.length}} Users</h1>
+<ul> 
+    <li *ngFor="let user of listUsers">
+        {{user.name}} || <a [routerLink]="['view', user.id]">View</a> ||<a [routerLink]="['edit', user.id]">Edit</a> ||  <a [routerLink]="['delete', user.id]">Delete</a>
+    </li>
+
+</ul>
