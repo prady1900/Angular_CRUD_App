@@ -7,6 +7,8 @@
           <mat-label>Username</mat-label>
           <input matInput placeholder="Username" formControlName="username" />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error *ngIf="addUserFor.controls['phone'].errors && addUserFor.controls['name'].hasError('required')">Username is Required</mat-error>
+          <mat-error *ngIf="addUserFor.controls['phone'].errors && addUserFor.controls['name'].hasError('minlength')">Username is less than 3 Char </mat-error> 
         </mat-form-field>
       </p>
       <p>
@@ -14,6 +16,8 @@
           <mat-label>Email</mat-label>
           <input matInput placeholder="Email" formControlName="email" />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error *ngIf="addUserFor.controls['phone'].errors && addUserFor.controls['email'].hasError('required')">Email is Required</mat-error>
+          <mat-error *ngIf="addUserFor.controls['phone'].errors && addUserFor.controls['email'].hasError('email')">Email is Invalid</mat-error>
         </mat-form-field>
       </p>
       <p>
@@ -21,6 +25,8 @@
           <mat-label>Phone</mat-label>
           <input matInput placeholder="Phone" formControlName="phone" />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-error *ngIf="addUserFor.controls['phone'].errors && addUserFor.controls['phone'].hasError('required')">Phone Number is required</mat-error>
+          <mat-error *ngIf="addUserFor.controls['phone'].errors && addUserFor.controls['phone'].hasError('maxlength')">Phone Number should be 10 Length</mat-error>
         </mat-form-field>
       </p>
 
