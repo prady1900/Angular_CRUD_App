@@ -9,6 +9,7 @@ import { UsersModule } from './users/users.module';
 import {MatListModule} from '@angular/material/list';
 import { LayoutModule } from './layout/layout.module';
 import {HttpClientModule} from '@angular/common/http'
+import {MatTableModule} from '@angular/material/table'
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {HttpClientModule} from '@angular/common/http'
     MatListModule,
     UsersModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
